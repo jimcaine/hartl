@@ -1,6 +1,34 @@
 <% provide(:title, 'Contact') %>
-<h1>Contact</h1>
-<p>
-  Contact Ruby on Rails Tutorial about the sample app at the
-  <a href="http://railstutorial.org/contact">contact page</a>.
-</p>
+<h1>Denarius Donovan</h1>
+<div align="center">
+<p>Title:</p>
+<p>Materials: text, wire, pencil, nails
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+ 
+<script>
+	$(document).ready(function(){
+		$("#play-bt").click(function(){
+			$("#audio-player")[0].play();
+			$("#message").text("Music started");
+		})
+ 
+		$("#pause-bt").click(function(){
+			$("#audio-player")[0].pause();
+			$("#message").text("Music paused");
+		})
+ 
+		$("#stop-bt").click(function(){
+			$("#audio-player")[0].pause();
+			$("#audio-player")[0].currentTime = 0;
+			$("#message").text("Music Stopped");
+		})
+	})
+</script>
+ 
+<audio id="audio-player" name="audio-player" src="song.mp3" ></audio>
+<div id="message"></div>
+<a id="play-bt" href="#">Play music</a> | <a id="pause-bt" href="#">Pause music</a> | <a id="stop-bt" href="#">Stop music</a>
+
+</div>
